@@ -2,19 +2,27 @@
 
 ## What is FBCTF?
 
-The Facebook CTF is a platform to host Jeopardy and “King of the Hill” style Capture the Flag competitions.
+The Facebook CTF is a platform to host Jeopardy and “King of the Hill” style Capture the Flag competitions. For more information on the FBCTF, visit the [main FBCTF github](https://github.com/facebook/fbctf)
 
-<div align="center"><img src="screencapture.gif" /></div>
+## What did I do with FBCTF
 
-## How do I use FBCTF?
+I ~~interned~~ ~~toured~~ hung-out with the e-crimes team while maintaining a FB badge for 3 weeks in July of 2017. During that time, I learned a ton about using [maltego](https://en.wikipedia.org/wiki/Maltego), but I also spent some time fixing some issues with the FBCTF platform. This was my first time working with the [hack language](https://hacklang.org/) so I had quite a learning curve but here were my main contributions:
 
-* Organize a competition. This can be done with as few as two participants, all the way up to several hundred. The participants can be physically present, active online, or a combination of the two.
-* Follow setup instructions below to spin up platform infrastructure.
-* Enter challenges into admin page
-* Have participants register as teams
-* Enjoy!
+Multiple Bugs fixed and Multiple choice feature added (see [add_multiple_choice branch](https://github.com/archang31/fbctf/tree/add_multiple_choice)).
 
-For more information, see the [Admin Guide](https://github.com/facebook/fbctf/wiki/Admin-Guide)
+* Fixed issue #82 (Level Bonus not reset).
+* Fixed issue #421 (hint points now subtracted only after scoring level).
+* Added issue #218 (multiple choice option for quizes).
+* As part of issue #218, added ability to set a "wrong answer penalty" to quizes and flags (required so could not spam multiple choice answers).
+* Enabled bonus and bonus dec to be set initially (fixed half of issue #19).
+* Updated to pass hh_client (test cases updated to handle new parameters)
+* Recommend a new test-case be added to validate multiple choice functionality.
+
+The FBCTF platform underwent some significant changes that resulted in a rather long PR process. Plus, I was already back at USMA teaching by the time they looked at my PR. More details on the final PR here: https://github.com/facebook/fbctf/pull/549 . 
+
+## Final Note
+
+I know there has been a fair bit of negative Facebook press recently, but I had an awesome time working for/with Facebook and learned a lot about how a real tech company operates. I also was impressed at how much time and effort was put into finding and reporting things like child trafficking, election fraud, and other criminal abuses. I might have a slightly distorted view since I was working on the electronic-crimes team (and fighting these things was their whole reason for existence), but FB was far more invested in protecting its users than I ever would have anticipated. Whether it was goodwill towards mankind or a sneaky business model, I really learned a lot from my time with the company and am a better person/coder because of my time spent with the company.
 
 # Installation
 
